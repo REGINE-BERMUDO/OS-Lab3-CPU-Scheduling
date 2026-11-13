@@ -58,41 +58,7 @@ RMS priorities: T1 (T = 4, highest) > T2 (T = 5) > T3 (T = 10, lowest).
 
 **Gantt chart**
 
-```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'taskBkgColor': '#A8F0C6',
-    'taskBorderColor': '#000000',
-    'taskTextColor': '#000000',
-    'taskTextDarkColor': '#000000',
-    'taskTextLightColor': '#000000',
-    'taskTextOutsideColor': '#000000',
-    'textColor': '#000000',
-    'titleColor': '#000000',
-    'gridColor': '#000000',
-    'sectionBkgColor': '#FFFFFF',
-    'altSectionBkgColor': '#FFFFFF',
-    'sectionBkgColor2': '#FFFFFF',
-    'background': '#FFFFFF'
-  },
-  'gantt': { 'displayMode': 'compact' }
-}}%%
-gantt
-    title MLQ Gantt Chart (Time in ms)
-    dateFormat X
-    axisFormat %-S
-    tickInterval 1second
-    section Schedule
-    P1 :0, 2s
-    P2 :2, 2s
-    P1 :4, 2s
-    P5 :6, 2s
-    P2 :8, 2s
-    P1 :10, 1s
-    P3 :11, 6s
-    P4 :17, 3s
-```
+![MLQ Gantt Chart](images/gantt_mlq.svg)
 
 | PID | AT | BT | CT | TAT | WT |
 |---|---|---|---|---|---|
@@ -115,49 +81,7 @@ Since 65% < 77.98%, the task set **passes** the sufficient-bound test.
 
 **Gantt chart**
 
-```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'taskBkgColor': '#A8F0C6',
-    'taskBorderColor': '#000000',
-    'taskTextColor': '#000000',
-    'taskTextDarkColor': '#000000',
-    'taskTextLightColor': '#000000',
-    'taskTextOutsideColor': '#000000',
-    'textColor': '#000000',
-    'titleColor': '#000000',
-    'gridColor': '#000000',
-    'sectionBkgColor': '#FFFFFF',
-    'altSectionBkgColor': '#FFFFFF',
-    'sectionBkgColor2': '#FFFFFF',
-    'background': '#FFFFFF'
-  },
-  'gantt': { 'displayMode': 'compact' }
-}}%%
-gantt
-    title EDF Gantt Chart (Time in ms)
-    dateFormat X
-    axisFormat %-S
-    tickInterval 1second
-    section Schedule
-    T1   :0, 1s
-    T2   :1, 1s
-    T3   :2, 2s
-    T1   :4, 1s
-    T2   :5, 1s
-    Idle :6, 2s
-    T1   :8, 1s
-    Idle :9, 1s
-    T2   :10, 1s
-    T3   :11, 1s
-    T1   :12, 1s
-    T3   :13, 1s
-    Idle :14, 1s
-    T2   :15, 1s
-    T1   :16, 1s
-    Idle :17, 3s
-```
+![RMS Gantt Chart](images/gantt_rms_edf.svg)
 
 | Task | Release | Deadline | Completion | Status |
 |---|---|---|---|---|
@@ -181,49 +105,7 @@ CPU Utilization: **65%**. Classical EDF test (U <= 100%): **PASS**.
 
 **Gantt chart**
 
-```mermaid
-%%{init: {
-  'theme': 'base',
-  'themeVariables': {
-    'taskBkgColor': '#A8F0C6',
-    'taskBorderColor': '#000000',
-    'taskTextColor': '#000000',
-    'taskTextDarkColor': '#000000',
-    'taskTextLightColor': '#000000',
-    'taskTextOutsideColor': '#000000',
-    'textColor': '#000000',
-    'titleColor': '#000000',
-    'gridColor': '#000000',
-    'sectionBkgColor': '#FFFFFF',
-    'altSectionBkgColor': '#FFFFFF',
-    'sectionBkgColor2': '#FFFFFF',
-    'background': '#FFFFFF'
-  },
-  'gantt': { 'displayMode': 'compact' }
-}}%%
-gantt
-    title RMS / EDF Gantt Chart (Time in ms)
-    dateFormat X
-    axisFormat %-S
-    tickInterval 1second
-    section Schedule
-    T1   :0, 1s
-    T2   :1, 1s
-    T3   :2, 2s
-    T1   :4, 1s
-    T2   :5, 1s
-    Idle :6, 2s
-    T1   :8, 1s
-    Idle :9, 1s
-    T2   :10, 1s
-    T3   :11, 1s
-    T1   :12, 1s
-    T3   :13, 1s
-    Idle :14, 1s
-    T2   :15, 1s
-    T1   :16, 1s
-    Idle :17, 3s
-```
+![EDF Gantt Chart](images/gantt_rms_edf.svg)
 
 | Task | Release | Deadline | Completion | Status |
 |---|---|---|---|---|
